@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nopi_swirl.databinding.ActivityAuthBinding
+import com.example.nopi_swirl.tugas_7.BaseActivity
 
 class AuthActivity : AppCompatActivity() {
 
@@ -23,7 +24,7 @@ class AuthActivity : AppCompatActivity() {
         val isLogin = sharedPref.getBoolean("isLogin", false)
 
         if (isLogin) {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, BaseActivity::class.java))
             finish()
             return
         }
@@ -45,7 +46,7 @@ class AuthActivity : AppCompatActivity() {
                 editor.putString("username", username)
                 editor.commit()
                 startActivity(
-                    Intent(this, MainActivity::class.java)
+                    Intent(this, BaseActivity::class.java)
                 )
                 finish()
             } else {

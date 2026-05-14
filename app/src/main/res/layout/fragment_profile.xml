@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="32dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dokter"
+                app:shapeAppearanceOverlay="@style/CircleImage" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                app:backgroundTint="#2D6BFF"
+                app:fabSize="mini"
+                app:srcCompat="@android:drawable/ic_menu_edit"
+                app:tint="#FFFFFF" />
+        </FrameLayout>
+
+        <!-- Full Name -->
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Full Name" />
+
+        <TextView
+            style="@style/InputStyle"
+            android:text="Nofita Nurchasanah"
+            android:padding="16dp"
+            android:background="@drawable/bg_input_field" />
+
+        <!-- Phone -->
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Phone Number" />
+
+        <TextView
+            style="@style/InputStyle"
+            android:text="0813 6598 9140"
+            android:padding="16dp"
+            android:background="@drawable/bg_input_field" />
+
+        <!-- Email -->
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Email" />
+
+        <TextView
+            style="@style/InputStyle"
+            android:text="nofita24si@mahasiswa.pcr.ac.id"
+            android:padding="16dp"
+            android:background="@drawable/bg_input_field" />
+
+        <!-- Date -->
+        <TextView
+            style="@style/LabelStyle"
+            android:text="Date Of Birth" />
+
+        <TextView
+            style="@style/InputStyle"
+            android:text="18 / 11 / 2004"
+            android:padding="16dp"
+            android:background="@drawable/bg_input_field" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#2D6BFF"
+            android:text="Update Profile"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
+
+    </LinearLayout>
+</ScrollView>
