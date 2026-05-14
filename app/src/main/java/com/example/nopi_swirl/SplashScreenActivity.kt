@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.nopi_swirl.tugas_7.BaseActivity
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -23,7 +24,7 @@ class SplashScreenActivity : AppCompatActivity() {
                 startActivity(
                     Intent(
                         this@SplashScreenActivity,
-                        MainActivity::class.java
+                        BaseActivity::class.java
                     )
                 )
             } else {

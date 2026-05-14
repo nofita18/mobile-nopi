@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.nopi_swirl.AuthActivity
 import com.example.nopi_swirl.WebViewActivity
 import com.example.nopi_swirl.databinding.FragmentHomeBinding
+import androidx.appcompat.app.AlertDialog
 
 class HomeFragment : Fragment() {
 
@@ -41,12 +42,24 @@ class HomeFragment : Fragment() {
             val sharedPref = requireContext()
                 .getSharedPreferences("user_pref", Context.MODE_PRIVATE)
 
-            sharedPref.edit().clear().apply()
+            AlertDialog.Builder(requireContext())
+                .setTitle("Logout")
+                .setMessage("Yakin ingin logout?")
+                .setPositiveButton("Ya") { dialog, _ ->
 
-            val intent = Intent(requireContext(), AuthActivity::class.java)
-            startActivity(intent)
+                    val editor = sharedPref.edit()
+                    editor.clear()
+                    editor.apply()
 
-            requireActivity().finish()
+                    dialog.dismiss()
+
+                    val intent = Intent(requireContext(), AuthActivity::class.java)
+                    startActivity(intent)
+
+                    requireActivity().finish()
+                }
+                .setNegativeButton("Tidak", null)
+                .show()
         }
     }
 
