@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".tugas_2.SecondActivity">
+
+    <!-- ========================================== -->
+    <!-- BAGIAN 1: BANGUN DATAR (LUAS SEGITIGA)     -->
+    <!-- ========================================== -->
+
+    <!-- Card background untuk Bangun Datar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDatar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Judul Bangun Datar -->
+            <TextView
+                android:id="@+id/titleDatar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="📐 BANGUN DATAR"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#2196F3"
+                android:padding="12dp"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Nama rumus -->
+            <TextView
+                android:id="@+id/rumusDatar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="LUAS SEGITIGA"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#2196F3"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/titleDatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <!-- Label Alas -->
+            <TextView
+                android:id="@+id/labelAlas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alas (cm):"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/rumusDatar"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- Input Alas -->
+            <EditText
+                android:id="@+id/inputAlas"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:hint="Masukkan alas..."
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/rumusDatar"
+                app:layout_constraintStart_toEndOf="@id/labelAlas"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp" />
+
+            <!-- Label Tinggi -->
+            <TextView
+                android:id="@+id/labelTinggi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tinggi (cm):"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/inputAlas"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <!-- Input Tinggi -->
+            <EditText
+                android:id="@+id/inputTinggi"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:hint="Masukkan tinggi..."
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/inputAlas"
+                app:layout_constraintStart_toEndOf="@id/labelTinggi"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp" />
+
+            <!-- Button Hitung Segitiga -->
+            <Button
+                android:id="@+id/btnHitungSegitiga"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="HITUNG LUAS"
+                android:backgroundTint="#4CAF50"
+                app:layout_constraintTop_toBottomOf="@id/inputTinggi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp" />
+
+            <!-- Hasil Luas Segitiga -->
+            <TextView
+                android:id="@+id/hasilSegitiga"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hasil Luas: ---"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:background="#E8F5E9"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/btnHitungSegitiga"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- ========================================== -->
+    <!-- BAGIAN 2: BANGUN RUANG (VOLUME KUBUS)      -->
+    <!-- ========================================== -->
+
+    <!-- Card background untuk Bangun Ruang -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRuang"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/cardDatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Judul Bangun Ruang -->
+            <TextView
+                android:id="@+id/titleRuang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="📦 BANGUN RUANG"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#FF9800"
+                android:padding="12dp"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Nama rumus -->
+            <TextView
+                android:id="@+id/rumusRuang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="VOLUME KUBUS"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FF9800"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/titleRuang"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+            <!-- Label Sisi -->
+            <TextView
+                android:id="@+id/labelSisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sisi (cm):"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/rumusRuang"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp" />
+
+            <!-- Input Sisi -->
+            <EditText
+                android:id="@+id/inputSisi"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:hint="Masukkan sisi kubus..."
+                android:inputType="numberDecimal"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                app:layout_constraintTop_toBottomOf="@id/rumusRuang"
+                app:layout_constraintStart_toEndOf="@id/labelSisi"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp" />
+
+            <!-- Button Hitung Kubus -->
+            <Button
+                android:id="@+id/btnHitungKubus"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="HITUNG VOLUME"
+                android:backgroundTint="#FF5722"
+                app:layout_constraintTop_toBottomOf="@id/inputSisi"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="20dp" />
+
+            <!-- Hasil Volume Kubus -->
+            <TextView
+                android:id="@+id/hasilKubus"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hasil Volume: ---"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:padding="12dp"
+                android:background="#FFF3E0"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/btnHitungKubus"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

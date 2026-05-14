@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_main">#FFF1F5</color>
+    <color name="primary_soft">#F8BBD0</color>
+    <color name="text_primary">#2D2D2D</color>
+    <color name="text_secondary">#777777</color>
+    <color name="brand_blue">#2E5BFF</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="text_gray">#E0E0E0</color>
+    <color name="primary_dark">#1A3FCC</color>
+    <color name="card">#FFFFFF</color>
+    <color name="textPrimary">#1E1E1E</color>
+    <color name="accent_green">#4CAF50</color>
+    <color name="accent_orange">#FF9800</color>
+    <color name="textSecondary">#666666</color>
+    <color name="primary">#294C9B</color>
+    <color name="primaryDark">#1C3772</color>
+    <color name="secondary">#BFE7FF</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="grayText">#7B7B7B</color>
+    <color name="background">#E9F6FF</color>
+</resources>

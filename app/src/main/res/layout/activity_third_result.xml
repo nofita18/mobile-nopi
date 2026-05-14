@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="40dp"
+            android:src="@android:drawable/ic_menu_add"
+            app:tint="#2962FF" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skin\nFirsts"
+            android:textColor="#2962FF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:lineSpacingExtra="-8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dermatology Center"
+            android:textColor="#2962FF"
+            android:textSize="12sp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Selamat datang di dashboard aplikasi. Silahkan pilih menu di bawah ini untuk melanjutkan aktivitas Anda."
+            android:textColor="#757575"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="40dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRumus"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="📦 Rumus Bangun Ruang"
+                android:textAllCaps="false"
+                android:backgroundTint="#2962FF"
+                app:cornerRadius="25dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCustom1"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="🎨 Custom 1"
+                android:textAllCaps="false"
+                android:textColor="#2962FF"
+                android:backgroundTint="#D1D9FF"
+                app:cornerRadius="25dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCustom2"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="🖼 Custom 2"
+                android:textAllCaps="false"
+                android:textColor="#2E7D32"
+                android:backgroundTint="#C8E6C9"
+                app:cornerRadius="25dp"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="🚪 Logout"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#E53935"
+                app:cornerRadius="25dp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
