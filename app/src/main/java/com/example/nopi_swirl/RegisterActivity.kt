@@ -1,4 +1,4 @@
-package com.example.nopiswirl.auth
+package com.example.nopi_swirl
 
 import android.os.Bundle
 import android.util.Patterns
