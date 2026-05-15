@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
-            android:text="Home Bina Desa"
+            android:text="Darurat Bencana"
             android:textColor="#2D6BFF"
             android:textSize="22sp"
             android:textStyle="bold" />

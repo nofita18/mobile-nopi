@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nopi_swirl.databinding.ActivityMainBinding
+import com.example.nopi_swirl.AuthActivity
 
 class MainActivity : AppCompatActivity() {
 

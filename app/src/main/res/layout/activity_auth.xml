@@ -182,11 +182,14 @@
                 android:textColor="#757575" />
 
             <TextView
+                android:id="@+id/tvRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Daftar Sekarang"
                 android:textColor="#2D6BFF"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"/>
         </LinearLayout>
 
     </LinearLayout>

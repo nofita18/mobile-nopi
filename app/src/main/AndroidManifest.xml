@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Nopiswirl">
         <activity
+            android:name=".tugas_7.RegisterActivity"
+            android:exported="false" />
+        <activity
             android:name=".tugas_7.BaseActivity"
             android:exported="false" />
         <activity

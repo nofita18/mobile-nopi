@@ -2,60 +2,67 @@ package com.example.nopi_swirl
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.nopi_swirl.databinding.ActivityAuthBinding
 import com.example.nopi_swirl.tugas_7.BaseActivity
+import com.example.nopiswirl.auth.RegisterActivity
+import com.example.nopiswirl.data.PrefManager
 
 class AuthActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAuthBinding
+    private lateinit var pref: PrefManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // SHARED PREFERENCES
-        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        pref = PrefManager(this)
 
-        // AUTO LOGIN
-        val isLogin = sharedPref.getBoolean("isLogin", false)
-
-        if (isLogin) {
-            startActivity(Intent(this, BaseActivity::class.java))
-            finish()
-            return
+        binding.btnLogin.setOnClickListener {
+            validateLogin()
         }
 
-        binding.btnLogin.setOnClickListener  {
-            val username = binding.etUsername.text.toString().trim()
-            val password = binding.etPassword.text.toString().trim()
-            if (username.isEmpty() || password.isEmpty()) {
-                AlertDialog.Builder(this)
-                    .setTitle("Peringatan")
-                    .setMessage("Username dan Password wajib diisi")
-                    .setPositiveButton("OK", null)
-                    .show()
-                return@setOnClickListener
-            }
-            if (username == password) {
-                val editor = sharedPref.edit()
-                editor.putBoolean("isLogin", true)
-                editor.putString("username", username)
-                editor.commit()
-                startActivity(
-                    Intent(this, BaseActivity::class.java)
-                )
-                finish()
-            } else {
-                AlertDialog.Builder(this)
-                    .setTitle("Login Gagal")
-                    .setMessage("Username atau Password salah")
-                    .setPositiveButton("OK", null)
-                    .show()
-            }
+        binding.tvRegister.setOnClickListener {
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+    }
+
+    private fun validateLogin() {
+
+        val username = binding.etUsername.text.toString().trim()
+        val password = binding.etPassword.text.toString().trim()
+
+        var valid = true
+        binding.etUsername.error = null
+        binding.etPassword.error = null
+
+        if (username.isEmpty()) {
+            binding.etUsername.error = "Username wajib diisi"
+            valid = false
+        }
+
+        if (password.isEmpty()) {
+            binding.etPassword.error = "Password wajib diisi"
+            valid = false
+        }
+
+        if (!valid) return
+
+        val savedEmail = pref.getEmail()
+        val savedPassword = pref.getPassword()
+
+        // RULE LOGIN
+        val loginSuccess =
+            (username == password) ||
+                    (username == savedEmail && password == savedPassword)
+
+        if (loginSuccess) {
+            startActivity(Intent(this, BaseActivity::class.java))
+            finish()
+        } else {
+            binding.etPassword.error = "Username atau Password salah"
         }
     }
 }
